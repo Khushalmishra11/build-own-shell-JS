@@ -7,16 +7,6 @@ const rl = readline.createInterface({
 
 // Uncomment this block to pass the first stage
 rl.question("$ ", (answer) => {
+  console.log(`${answer}: command not found`);
   rl.close();
 });
-function promptUser(){
-  rl.question("$ ",(answer)=>{
-    if(answer){
-      console.log(`${answer}: command not found`;
-      
-    }
-    promptUser();
-  })
-}
-
-promptUser();
