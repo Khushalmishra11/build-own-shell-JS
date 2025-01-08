@@ -9,3 +9,14 @@ const rl = readline.createInterface({
 rl.question("$ ", (answer) => {
   rl.close();
 });
+function promptUser(){
+  rl.question("$ ",(answer)=>{
+    if(answer){
+      console.log(`${answer}: command not found`;
+      
+    }
+    promptUser();
+  })
+}
+
+promptUser();
