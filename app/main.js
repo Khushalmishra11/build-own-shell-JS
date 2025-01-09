@@ -10,15 +10,14 @@ rl.question("$ ", (answer) => {
   rl.close();
 });
 
-function promptUser() {
+function prompt() {
   rl.question("$ ", (answer) => {
     if (answer) {
       console.log(`${answer}: command not found`);
-      
-      promptUser();
+      prompt();
     }
   });
 }
 
-promptUser();
+prompt();
 
