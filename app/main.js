@@ -11,10 +11,11 @@ rl.question("$ ", (answer) => {
 });
 
 function prompt() {
+  while(true)
   rl.question("$ ", (answer) => {
     console.log(`${answer}: command not found`);
     prompt(); // Recursively call the function to keep the loop going
-  });
+  })};
 }
 prompt();
 
