@@ -15,8 +15,8 @@ function promptUser() {
     if (answer) {
       console.log(`${answer}: command not found`);
       
+      promptUser();
     }
-    promptUser();
   });
 }
 
