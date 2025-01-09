@@ -12,12 +12,9 @@ rl.question("$ ", (answer) => {
 
 function prompt() {
   rl.question("$ ", (answer) => {
-    for(i=1; i<=3; i++){  
     console.log(`${answer}: command not found`);
-    prompt();
-    }
+    prompt(); // Recursively call the function to keep the loop going
   });
 }
-
 prompt();
 
