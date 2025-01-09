@@ -12,9 +12,10 @@ rl.question("$ ", (answer) => {
 
 function prompt() {
   rl.question("$ ", (answer) => {
-      console.log(`${answer}: command not found`);
-      prompt();
-    
+    for(i=1; i<=3; i++){  
+    console.log(`${answer}: command not found`);
+    prompt();
+    }
   });
 }
 
